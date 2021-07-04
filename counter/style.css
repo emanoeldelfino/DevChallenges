@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+  --green-color: #21EB00;
+  --gray-color: #191A18;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font: inherit;
+  vertical-align: middle;
+  padding: 0.5rem;
+  margin: 0;
+  display: inline-block;
+  min-height: 1.5em;
+  box-sizing: content-box;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+input:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 35px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+form#form, form#form label {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  text-align: center;
+}
+
+form#form input[type='submit'], form#form label input {
+  border-radius: 15px;
+  padding: 5px;
+  font-size: 20px;
+  height: 35px;
+}
+
+form#form input[type='submit'] {
+  background-color: var(--green-color);
+  font-weight: bold;
+}
+
+form#form label input {
+  background-color: var(--gray-color);
+  color: white;
+}
+
+h1 {
+  color: var(--green-color);
+}
+
+form#form label input {
+  text-transform: uppercase;
+}
+
+form#form label {
+  font-size: 25px;
+}
+
+form#form * {
+  margin: 10px 0;
+}
