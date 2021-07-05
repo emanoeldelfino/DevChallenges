@@ -28,8 +28,9 @@ timeInput.addEventListener("click", () => {
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  window.sessionStorage.setItem("date", dateInput.value);
-  window.sessionStorage.setItem("time", timeInput.value);
+  let formData = dateInput.value.split("-").concat(timeInput.value.split(":"));
+  formData[1] -= 1;
+  window.sessionStorage.setItem("formData", JSON.stringify(formData));
   window.location.replace("./counter.html");
 });
 
