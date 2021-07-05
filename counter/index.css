@@ -24,9 +24,11 @@ form#form, form#form label {
   flex-direction: column;
   width: 250px;
   text-align: center;
+  align-items: center;
 }
 
 form#form input[type='submit'], form#form label input {
+  min-width: 225px;
   border-radius: 15px;
   padding: 5px;
   font-size: 20px;
