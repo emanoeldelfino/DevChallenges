@@ -10,21 +10,22 @@ Iniciar contagem -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Counter</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   <h1>Counter</h1>
   <form action="" id="form">
     <label for="date">
       Date
-      <input type="date" name="date" id="date">
+      <input type="date" name="date" id="date" required>
     </label>
     <label for="time">
       Time
-      <input type="time" name="time" id="time">
+      <input type="time" step="1" name="time" id="time" required>
     </label>
-    <input type="submit" value="Start counter">
+    <input type="submit" value="Start counter" id="start">
   </form>
-  <script src="./app.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>

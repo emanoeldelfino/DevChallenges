@@ -9,8 +9,23 @@ Dias Horas Minutos Segundos -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Counter</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./counter.css">
 </head>
 <body>
-  
+  <header>
+    <span>Counter</span>
+    <a href="./index.html"><button>Restart</button></a>
+  </header>
+  <main>
+    <div id="time">
+      <div><span id="days">100</span><span>Days</span></div>
+      <div><span id="hours">24</span><span>Hours</span></div>
+      <div><span id="minutes">60</span><span>Minutes</span></div>
+      <div><span id="seconds">60</span><span>Seconds</span></div>
+    </div>
+    <span id="text">Left</span>
+  </main>
+  <script src="./counter.js"></script>
 </body>
 </html>
