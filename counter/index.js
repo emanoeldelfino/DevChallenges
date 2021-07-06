@@ -2,17 +2,22 @@ const dateInput = document.querySelector("input#date");
 const timeInput = document.querySelector("input#time");
 const form = document.querySelector("form#form");
 
+const date = getDate("ymd", "-");
+dateInput.setAttribute("value", date);
+const time = getTime();
+timeInput.setAttribute("value", time);
+
 dateInput.addEventListener("click", () => {
   const date = getDate("ymd", "-");
   dateInput.setAttribute("min", date);
-  getTime();
+  setTime();
 });
 
 ["click", "change"].forEach((evt) => {
-  timeInput.addEventListener(evt, getTime);
+  timeInput.addEventListener(evt, setTime);
 });
 
-function getTime() {
+function setTime() {
   const now = new Date();
   const date = getDate("ymd", "-");
   console.log(dateInput.value, date);
@@ -66,6 +71,15 @@ function getDate(seq, sep) {
   date = date.trim().replaceAll(" ", sep);
 
   return date;
+}
+
+function getTime() {
+  const now = new Date();
+  let timeArr = [now.getHours() + 1, now.getMinutes(), now.getSeconds()];
+  timeArr = timeArr.map((value) => String(value).padStart(2, '0'))
+  
+  const time = timeArr.join(":");
+  return time;
 }
 
 function includesEachChar(string, chars) {
