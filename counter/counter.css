@@ -28,7 +28,7 @@ header a button {
   height: 40px;
 }
 
-header a button:hover {
+header a button:active {
   transform: scale(1.1);
 }
 
@@ -84,6 +84,19 @@ span#text {
   header {
     margin: 10px 0 0;
     position: inherit;
+  }
+}
+
+@media (max-width: 600px) and (max-height:775px) {
+  main div#time div span:first-of-type {
+    font-size: 7vh;
+  }
+  main div#time div span:last-of-type {
+    font-size: 5vh;
+  }
+
+  main span#text {
+    font-size: 8vh;
   }
 }
 

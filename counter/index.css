@@ -11,8 +11,12 @@ input {
   outline: none;
 }
 
-input:hover {
+input:active {
   transform: scale(1.1);
+}
+
+form#form label input:hover {
+  background-color: rgb(17, 17, 17);
 }
 
 h1 {
