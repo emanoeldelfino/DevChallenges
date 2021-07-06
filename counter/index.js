@@ -2,29 +2,33 @@ const dateInput = document.querySelector("input#date");
 const timeInput = document.querySelector("input#time");
 const form = document.querySelector("form#form");
 
-dateInput.addEventListener("click", () => {
-  const date = getDate("ymd", "-");
-  dateInput.setAttribute("min", date);
-});
+["click", "change"].forEach(evt => {
+  dateInput.addEventListener(evt, () => {
+    const date = getDate("ymd", "-");
+    dateInput.setAttribute("min", date);
+    timeInput.click();
+  });
 
-timeInput.addEventListener("click", () => {
-  const now = new Date();
-  const date = getDate("ymd", "-");
-  if (dateInput.value === date) {
-    const hourMinutes = now.toLocaleTimeString(navigator.language, {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-    });
-    const seconds = now.getSeconds();
-    const time = `${hourMinutes}:${seconds}`;
-
-    timeInput.removeAttribute("min");
-    timeInput.setAttribute("min", time);
-  } else {
-    timeInput.removeAttribute("min");
-  }
-});
+  timeInput.addEventListener(evt, () => {
+    const now = new Date();
+    const date = getDate("ymd", "-");
+    console.log(dateInput.value, date);
+    if (dateInput.value === date) {
+      const hourMinutes = now.toLocaleTimeString(navigator.language, {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      });
+      const seconds = now.getSeconds();
+      const time = `${hourMinutes}:${seconds}`;
+  
+      timeInput.removeAttribute("min");
+      timeInput.setAttribute("min", time);
+    } else {
+      timeInput.removeAttribute("min");
+    }
+  });
+})
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
