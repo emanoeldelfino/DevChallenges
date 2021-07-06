@@ -47,6 +47,9 @@ form#form input[type='submit'] {
 form#form label input {
   background-color: var(--gray-color);
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
