@@ -1,19 +1,23 @@
 :root {
-  --banner-green: #ADDE87;
-  --green-color: #5CA720;
+  --banner-background: #ADDE87;
+  --green: #5CA720;
   --black: #161616;
+  --footer-background: #F9F9F9;
+  --gray: #A5A1A14D;
+  --dark-green: #51B248;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  max-width: 100%;
   font-family: 'Lato', sans-serif;
 }
 
@@ -25,11 +29,12 @@ header {
   flex-direction: column;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  color: hsla(0, 0%, 0%, .1);
-  background-color: hsla(0, 0%, 0%, .1);
+ header, div#product-grid-bar, main, div#links-newsletter {
+  border-bottom: 1px solid var(--gray);
+}
+
+footer {
+  background-color: var(--footer-background);
 }
 
 header #bar {
@@ -42,7 +47,7 @@ ul li {
 }
 
 ul li i.bi {
-  color: var(--green-color);
+  color: var(--green);
   margin: 0 10px;
 }
 
@@ -50,19 +55,21 @@ ul li i.bi {
   background-image: url("./assets/banner.png");
   background-size: 100vh auto;
   background-repeat: no-repeat;
-  background-color: var(--banner-green);
+  background-color: var(--banner-background);
   width: 100vw;
+  max-width: 100%;
   height: 30vh;
   margin: 0;
   padding: 0;
   background-position: center center;
 }
 
-#product-grid {
+div#product-grid {
   display: grid;
   gap: 10px;
   height: 50vh;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin: 30px;
 }
 
 header div#bar, div#product-grid-bar {
@@ -73,13 +80,72 @@ div#product-grid-bar {
   justify-content: space-between;
 }
 
-header div#bar, div#product-grid-bar, footer {
+header div#bar, div#product-grid-bar, div#links-newsletter, div#media-credit-cards {
   padding: 20px 40px;
+}
+
+div#media-credit-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+img#mastercard-icon, img#visa-icon{
+  height: 20px;
+}
+
+img#paypal-icon {
+  height: 15px;
 }
 
 #links-newsletter {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+}
+
+label[for='newsletter-email'] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input#newsletter-email {
+  border-radius: 5px 0 0 5px;
+}
+
+input#submit {
+  background-color: var(--dark-green);
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+input#newsletter-email, input#submit {
+  padding: 10px 5px;
+  border: 1px solid var(--gray);
+}
+
+ul#links li, label[for='newsletter-email'] {
+  font-size: 14px;
+}
+
+#links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#credit-cards {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul#social-media span {
+  display: flex;
 }
 
 @media (max-height: 300px) {
@@ -88,12 +154,39 @@ header div#bar, div#product-grid-bar, footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header #bar {
     padding: 20px; 
   }
 
-  #product-grid {
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  div#product-grid {
+    grid-template: repeat(4, 200px) / repeat(2, 1fr);
+  }
+
+  div#links-newsletter {
+    flex-direction: column;
+  }
+
+  form#newsletter {
+    margin-top: 20px;
+  }
+
+  input#newsletter-email {
+    margin-bottom: 10px;
+  }
+  
+  input#newsletter-email, input#submit {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  ul#social-media span {
+    display: block;
+  }
+
+  ul#social-media span li:nth-child(2) {
+    margin-top: 10px;
   }
 }
