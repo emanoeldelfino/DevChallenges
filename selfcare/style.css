@@ -87,14 +87,19 @@ header div#bar, div#product-grid-bar, div#links-newsletter, div#media-credit-car
 div#media-credit-cards {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 img#mastercard-icon, img#visa-icon{
-  height: 20px;
+  height: 30px;
 }
 
 img#paypal-icon {
-  height: 15px;
+  height: 25px;
+}
+
+ul#social-media span i.bi {
+  font-size: 25px;
 }
 
 #links-newsletter {
@@ -188,5 +193,10 @@ ul#social-media span {
 
   ul#social-media span li:nth-child(2) {
     margin-top: 10px;
+  }
+
+  #credit-cards {
+    flex-direction: column;
+    width: 50px;
   }
 }
