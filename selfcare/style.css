@@ -197,6 +197,11 @@ div#product-grid {
   gap: 25px;
 }
 
+#social-media span li a {
+  display: inline-block;
+  height: 100%;
+}
+
 @media (max-height: 300px) {
   #banner {
     background-size: 300px;
