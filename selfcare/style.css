@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 :root {
   --banner-background: #ADDE87;
   --green: #5CA720;
@@ -6,8 +8,6 @@
   --gray: #A5A1A14D;
   --dark-green: #51B248;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,6 +19,7 @@ body {
   width: 100vw;
   max-width: 100%;
   font-family: 'Lato', sans-serif;
+  color: var(--black);
 }
 
 header div, header, ul {
@@ -35,6 +36,7 @@ header {
 
 footer {
   background-color: var(--footer-background);
+  margin-top: 50px;
 }
 
 header #bar {
@@ -51,6 +53,47 @@ ul li i.bi {
   margin: 0 10px;
 }
 
+#product-grid .product img {
+  height: 200px;
+  object-fit: cover;
+}
+
+#product-grid-bar span:nth-child(1) {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#product-grid-bar span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#product-grid .product img, .text {
+  width: 200px;
+}
+
+.text span {
+  display: block;
+}
+
+.text span:nth-child(1) {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.text span:nth-child(2) {
+  margin-top: 5px;
+}
+
+.text span {
+  font-size: 14px;
+}
+
+.text span b {
+  color: var(--green);
+  font-size: 16px;
+}
+
 #banner {
   background-image: url("./assets/banner.png");
   background-size: 100vh auto;
@@ -64,14 +107,6 @@ ul li i.bi {
   background-position: center center;
 }
 
-div#product-grid {
-  display: grid;
-  gap: 10px;
-  height: 50vh;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  margin: 30px;
-}
-
 header div#bar, div#product-grid-bar {
   display: flex;
 }
@@ -80,8 +115,9 @@ div#product-grid-bar {
   justify-content: space-between;
 }
 
-header div#bar, div#product-grid-bar, div#links-newsletter, div#media-credit-cards {
-  padding: 20px 40px;
+header #bar, #product-grid, #product-grid-bar, #links-newsletter, #media-credit-cards {
+  padding: 30px 40px;
+  font-weight: 600;
 }
 
 div#media-credit-cards {
@@ -129,7 +165,7 @@ input#submit {
 }
 
 input#newsletter-email, input#submit {
-  padding: 10px 5px;
+  padding: 10px 15px;
   border: 1px solid var(--gray);
 }
 
@@ -153,19 +189,29 @@ ul#social-media span {
   display: flex;
 }
 
+div#product-grid {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
 @media (max-height: 300px) {
   #banner {
     background-size: 300px;
   }
 }
 
+@media (max-width: 540px) {
+  div#product-grid {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 600px) {
   header #bar {
     padding: 20px; 
-  }
-
-  div#product-grid {
-    grid-template: repeat(4, 200px) / repeat(2, 1fr);
   }
 
   div#links-newsletter {
@@ -186,7 +232,7 @@ ul#social-media span {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 405px) {
   ul#social-media span {
     display: block;
   }
@@ -198,5 +244,15 @@ ul#social-media span {
   #credit-cards {
     flex-direction: column;
     width: 50px;
+  }
+
+  div#product-grid div.product {
+    align-items: center;
+  }
+}
+
+@media (min-width: 850px) {
+  header div#bar, div#product-grid, div#product-grid-bar, div#links-newsletter, div#media-credit-cards {
+    padding: 20px 50px;
   }
 }
