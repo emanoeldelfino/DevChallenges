@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 :root {
   --banner-background: #ADDE87;
   --green: #5CA720;
@@ -30,7 +29,7 @@ header {
   flex-direction: column;
 }
 
- header, div#product-grid-bar, main, div#links-newsletter {
+header, div#product-grid-bar, main, div#links-newsletter {
   border-bottom: 1px solid var(--gray);
 }
 
@@ -126,7 +125,7 @@ div#media-credit-cards {
   align-items: center;
 }
 
-img#mastercard-icon, img#visa-icon{
+img#mastercard-icon, img#visa-icon {
   height: 30px;
 }
 
@@ -136,6 +135,8 @@ img#paypal-icon {
 
 ul#social-media span i.bi {
   font-size: 25px;
+  margin-left: 0px;
+  margin-right: 15px;
 }
 
 #links-newsletter {
@@ -181,7 +182,7 @@ ul#links li, label[for='newsletter-email'] {
 #credit-cards {
   display: flex;
   width: 150px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -202,13 +203,43 @@ div#product-grid {
   height: 100%;
 }
 
+@media(max-width: 250px) {
+  header div#bar, div#product-grid-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #bar ul, #product-grid-bar :nth-child(2)  {
+    margin-top: 15px;
+  }
+}
+
 @media (max-height: 300px) {
   #banner {
     background-size: 300px;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 405px) {
+  #banner {
+    background-size: auto 50vw;
+  }
+  ul#social-media span {
+    display: block;
+  }
+  ul#social-media span li:nth-child(2) {
+    margin-top: 10px;
+  }
+  #credit-cards {
+    flex-direction: column;
+    width: 50px;
+  }
+  div#product-grid div.product {
+    align-items: center;
+  }
+}
+
+@media (max-width: 505px) {
   div#product-grid {
     justify-content: center;
   }
@@ -216,43 +247,20 @@ div#product-grid {
 
 @media (max-width: 600px) {
   header #bar {
-    padding: 20px; 
+    padding: 20px;
   }
-
   div#links-newsletter {
     flex-direction: column;
   }
-
   form#newsletter {
     margin-top: 20px;
   }
-
   input#newsletter-email {
     margin-bottom: 10px;
   }
-  
   input#newsletter-email, input#submit {
     width: 100%;
     border-radius: 5px;
-  }
-}
-
-@media (max-width: 405px) {
-  ul#social-media span {
-    display: block;
-  }
-
-  ul#social-media span li:nth-child(2) {
-    margin-top: 10px;
-  }
-
-  #credit-cards {
-    flex-direction: column;
-    width: 50px;
-  }
-
-  div#product-grid div.product {
-    align-items: center;
   }
 }
 
