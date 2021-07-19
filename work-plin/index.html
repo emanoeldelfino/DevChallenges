@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work plin</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <header>
-    <h1 id="logo">Work <span class="purple">plin</span></h1>
-    <nav>
-      <ul id="nav__links" class="links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Places</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <img src="./img/illustration.png" alt="Two ballons connecting two girls which are using a laptop and a tablet respectively">
-    <h2><span>Everything</span class="purple"> in one click</h2>
-    
-    <form>
-      <h2>Find your <span class="purple">plin</span>!</h2>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      </p>
-      <div id="inputs">
-        <input type="number" min="1" max="10" placeholder="How many people?">
-        <input type="text" placeholder="For how long?">
-        <input type="email" placeholder="Your best e-mail!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work plin</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">Work <span class="purple">plin</span></h1>
+      <nav>
+        <ul id="nav__links" class="links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Places</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="illustration-text">
+        <img
+          src="./img/illustration.png"
+          alt="Two ballons connecting two girls which are using a laptop and a tablet respectively"
+          id="illustration"
+        />
+        <h2 id="text"><span class="purple">Everything</span> in one click.</h2>
       </div>
-      <input type="submit" value="Submit" class="purple">
-    </form>
-  </main>
-  <footer>
-    <ul id="footer_links" class="links">
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Join us!</a></li>
-      <li><a href="#">Help</a></li>
-    </ul>
-    <span>Work plin</span>
-  </footer>
-</body>
+
+      <form>
+        <h2>Find your <span class="purple">plin</span>!</h2>
+        <div>
+          <div id="form-text">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div id="inputs">
+            <input
+              type="number"
+              min="1"
+              max="10"
+              placeholder="How many people?"
+            />
+            <input type="text" placeholder="For how long?" />
+            <input type="email" placeholder="Your best e-mail!" />
+          </div>
+        </div>
+        <input type="submit" value="Submit" class="purple" id="submit">
+      </form>
+    </main>
+    <footer>
+      <ul id="footer__links" class="links">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Join us!</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <span>Work plin</span>
+    </footer>
+  </body>
 </html>
