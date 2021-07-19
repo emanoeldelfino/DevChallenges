@@ -81,8 +81,11 @@ footer {
 }
 
 #inputs input {
+  font-weight: 600;
+  font-size: 16px;
   border: 2px solid var(--purple);
   outline: none;
+  box-shadow: var(--purple) 0px 5px 15px -5px;
 }
 
 #inputs input:focus {
@@ -112,11 +115,6 @@ input#submit {
 #inputs input, input#submit {
   border-radius: 10px;
 }
-
-#inputs input {
-  box-shadow: var(--purple) 0px 5px 15px -5px;
-}
-
 #form-text p {
   text-align: justify;
   text-align-last: center;
@@ -160,6 +158,16 @@ header, ul#nav__links {
 
 .purple {
   color: var(--purple);
+}
+
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 
 @media (max-width: 950px) {
