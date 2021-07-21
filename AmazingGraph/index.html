@@ -6,28 +6,41 @@ Start now -->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazing Graph</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <header>
-    <h1 id="logo">DevChallenge</h1>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </header>
-  <main>
-    <div id="wrapper">
-      <h1 id="page-title">Create amazing graphics</h1>
-      <p id="page-text">Colaborate and create beautiful graphics with your team</p>
-      <button type="button">Start now</button>
-    </div>
-    <img src="./assets/team.jpg" alt="illustration image of team" id="team"/>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazing Graph</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">DevChallenge</h1>
+      <nav class="navbar">
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+        <ul class="navbar-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="wrapper">
+        <h1 id="page-title">Create amazing graphics</h1>
+        <p id="page-text">
+          Colaborate and create beautiful graphics with your team
+        </p>
+        <button type="button" id="start">Start now</button>
+      </div>
+      <img src="./assets/team.jpg" alt="illustration image of team" id="team" />
+    </main>
+    <script src="./app.js"></script>
+  </body>
 </html>

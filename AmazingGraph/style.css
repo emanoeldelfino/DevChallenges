@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 :root {
   --orange: #D2872C;
   --gray: #766F68;
@@ -24,7 +23,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, .85);
 }
 
 header {
@@ -45,7 +44,7 @@ header ul {
   gap: 25px;
 }
 
-button[type='button'] {
+button#start {
   padding: 15px 75px;
   font-size: 30px;
   background-color: var(--orange);
@@ -83,4 +82,128 @@ img#team {
   /* width: 400px; */
   width: 800px;
   height: auto;
+}
+
+@media (max-width: 1500px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  h1#page-title, p#page-text {
+    text-align: center;
+  }
+  img#team {
+    width: 75vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 1050px) {
+  h1#page-title {
+    font-size: 50px;
+  }
+  p#page-text {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 545px) {
+  h1#page-title {
+    font-size: 30px;
+  }
+  p#page-text {
+    font-size: 20px;
+  }
+  h1#logo {
+    font-size: 30px;
+  }
+  button#start {
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+}
+
+/* Burger menu by WebDev Simplified with some minor changes */
+
+.toggle-button {
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  .navbar-links {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  h1#logo {
+    font-size: 25px;
+  }
+}
+
+.toggle-button {
+  top: 5rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 120px;
+    display: none;
+    flex-direction: column;
+  }
+  .navbar-links ul {
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+    gap: 5px;
+  }
 }
