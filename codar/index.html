@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   </head>
   <body>
     <header>
@@ -14,7 +15,7 @@
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Serviços</a></li>
           <li><a href="#">Contato</a></li>
-          <li><a href="#" class="red-button"">Login</a></li>
+          <li><a href="#" class="red-button" id="login">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -29,40 +30,44 @@
           <button class="red-button" id="budget">Solicitar orçamento</button>
         </div>
       </div>
-      <div>
+      <div id="services">
         <ul id="services-list">
-          <li>Domínio personalizado</li>
-          <li>Hospedagem</li>
-          <li>Site responsivo</li>
-          <li>Redes sociais</li>
-          <li>Chat online</li>
-          <li>Blog integrado</li>
+          <li><i class="bi bi-check-circle-fill"></i> Hospedagem</li>
+          <li><i class="bi bi-check-circle-fill"></i> Domínio personalizado</li>
+          <li><i class="bi bi-check-circle-fill"></i> Site responsivo</li>
+          <li><i class="bi bi-check-circle-fill"></i> Redes sociais</li>
+          <li><i class="bi bi-check-circle-fill"></i> Chat online</li>
+          <li><i class="bi bi-check-circle-fill"></i> Blog integrado</li>
         </ul>
         <img id="coding" src="./assets/coding_.png" />
       </div>
-      <section>
-        <label for="phone-number">Nossa equipe está à disposição!</label>
+      <section id="call">
+        <label for="phone">Nossa equipe está à disposição!</label>
         <input id="phone" type="tel" placeholder="Celular" />
-        <input class="red-button" type="submit" value="Ligamos pra você" />
+        <input class="red-button" type="submit" value="Ligamos para você" />
       </section>
       <section id="reviews">
-        <div id="review">
-          <div id="profile-image"></div>
-          <p>
-            Já tive experiências com outras 4 empresas da área e a Codar é sem
-            sombra de dúvidas superior em todos os aspectos.
-          </p>
-          <h3>Pedro Ferreira</h3>
-          <h4>Construtora Minari</h4>
+        <div class="review">
+          <div class="profile-image"></div>
+          <div class="review-text">
+            <p>
+              Já tive experiências com outras 4 empresas da área e a Codar é sem
+              sombra de dúvidas superior em todos os aspectos.
+            </p>
+            <h3>Pedro Ferreira</h3>
+            <h4>Construtora Minari</h4>
+          </div>
         </div>
-        <div id="review">
-          <div id="profile-image"></div>
-          <p>
-            Processos bem simples e criação de um site exatamente como a minha
-            escola queria!
-          </p>
-          <h3>Maria Rita</h3>
-          <h4>Escola Criança Feliz</h4>
+        <div class="review">
+          <div class="profile-image"></div>
+          <div class="review-text">
+            <p>
+              Processos bem simples e criação de um site exatamente como a minha
+              escola queria!
+            </p>
+            <h3>Maria Rita</h3>
+            <h4>Escola Criança Feliz</h4>
+          </div>
         </div>
       </section>
     </main>
@@ -77,17 +82,19 @@
       </div>
       <div id="contact">
         <h2>Contato</h2>
-        <ul>
+        <ul id="information">
           <li>123 Av. Manjar - Nárnia</li>
           <li>+55 96 2321-3131</li>
-          <li><a href="mailto:contato@codar.com"></a></li>
+          <li><a href="mailto:contato@codar.com">contato@codar.com</a></li>
         </ul>
       </div>
       <div>
         <h2>Redes sociais</h2>
-        <span>Facebook Icon</span>
-        <span>Instagram Icon</span>
-        <span>Twitter Icon</span>
+        <ul id="social-medias">
+          <li><a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="https://www.twitter.com"><i class="bi bi-twitter"></i></a></li>
+        </ul>
       </div>
     </footer>
   </body>

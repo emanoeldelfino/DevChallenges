@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 :root {
   --red: #D6000D;
+  --light-gray: rgb(0, 0, 0, .1);
 }
 
 * {
@@ -21,6 +21,11 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  margin: 25px;
+}
+
+main {
+  margin: 100px 75px;
 }
 
 ul li {
@@ -29,7 +34,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 ul.nav__links {
@@ -47,7 +52,7 @@ h1#heading-text {
 }
 
 span.big {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 footer {
@@ -55,50 +60,245 @@ footer {
   background-color: black;
   display: flex;
   justify-content: space-between;
-  height: 300px;
+  padding: 100px 50px;
+  gap: 25px;
 }
 
-footer div {
+footer>div {
   width: 25%;
+  max-width: 200px;
 }
 
-main > div {
+main>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main div:first-child {
+section#reviews {
   margin-top: 50px;
 }
 
-main > div+div {
+main>div+div {
   margin-top: 150px;
 }
 
-#heading-content > div {
+#heading-content>div {
   display: flex;
   flex-direction: column;
   max-width: 300px;
 }
 
+button#budget {
+  max-width: 225px;
+}
+
 .red-button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: none;
   border-radius: 5px;
   background-color: var(--red);
   color: white;
   font-size: bold;
-}
-
-button#budget {
-  width: 200px;
+  font-size: 20px;
 }
 
 input#phone {
   padding: 10px 20px;
+  font-size: 15px;
+  margin-right: 5px;
   border: none;
-  background-color: rgb(0, 0, 0, .1);
+  background-color: var(--light-gray);
+  border-radius: 5px;
   font-size: bold;
   outline: none;
+}
+
+label[for='phone'] {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul#information {
+  padding: 0;
+  margin: 0;
+}
+
+ul#information li a {
+  text-decoration: underline;
+}
+
+ul#information li a:hover {
+  color: gray;
+}
+
+section#reviews {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review {
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  max-width: 450px;
+  display: flex;
+  padding: 25px;
+}
+
+.profile-image {
+  height: 75px;
+  width: 75px;
+  min-width: 75px;
+  background-color: var(--red);
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.review-text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.review h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+i.bi {
+  color: var(--red);
+  font-size: 120%;
+}
+
+i.bi-check-circle-fill {
+  margin-right: 20px;
+}
+
+ul#services-list li {
+  font-size: 20px;
+  margin: 10px 0;
+  display: flex;
+}
+
+#login {
+  padding: 5px 40px;
+}
+
+section input[type='submit'] {
+  font-size: initial;
+  max-width: 300px;
+}
+
+footer div h2 {
+  margin-bottom: 25px;
+}
+
+footer>div>i.bi {
+  font-size: 25px;
+}
+
+ul#social-medias {
+  display: flex;
+}
+
+ul#social-medias li a i {
+  margin-right: 0;
+}
+
+ul#social-medias li {
+  margin-right: 10px;
+}
+
+#information li {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1150px) {
+  section#reviews {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  #heading-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #services {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  #heading-content>div {
+    margin-top: 30px;
+    align-items: center;
+  }
+  #heading-content>div>button {
+    margin-top: 20px;
+  }
+  #call {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  #call * {
+    font-size: 21px;
+  }
+  #phone::placeholder {
+    font-size: 21px;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer>div {
+    width: initial;
+  }
+}
+
+@media (max-width: 550px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    margin: 50px 20px;
+  }
+  #services {
+    margin-top: 50px;
+  }
+  ul.nav__links {
+    margin-top: 10px;
+  }
+  #login {
+    display: none;
+  }
+  span.big {
+    font-size: 30px;
+    display: block;
+  }
+  .red-button {
+    font-size: 15px;
+  }
+  img#video-call, img#coding {
+    width: 200px;
+    height: auto;
+  }
+  #heading-content>div {
+    text-align: center;
+  }
+  #call {
+    padding: 50px 25px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .profile-image {
+    display: none;
+  }
 }
