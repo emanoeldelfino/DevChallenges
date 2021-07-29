@@ -15,3 +15,26 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+main {
+  display: flex;
+}
+
+img#interview {
+  width: 65vw;
+}
+
+main > div {
+  width: 35vw;
+  height: 100vh;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0 0 15px;
+}
+
+img#logo {
+  width: 130px;
+}
