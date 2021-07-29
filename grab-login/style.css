@@ -38,3 +38,73 @@ main > div {
 img#logo {
   width: 130px;
 }
+
+form#login-form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.input-wrapper {
+  height: 100%;
+  border: 2px solid white;
+}
+
+input#login {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+input#login:hover {
+  color: white;
+  background-color: black;
+}
+
+.input-wrapper, input#login {
+  width: 100%;
+  border-radius: 15px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper, .input-wrapper input {
+  background-color: transparent;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px  15px 0;
+  color: white;
+  /* caret-color: white; */
+}
+
+.input-wrapper span {
+  font-size: 20px;
+  color: white;
+}
+
+.input-wrapper span, .input-wrapper input {
+  margin-left: 5px;
+}
+
+.input-wrapper input, input#login {
+  border: none;
+  outline: none;
+}
+
+a#trouble-login {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+a#trouble-login:hover {
+  color: black;
+}
