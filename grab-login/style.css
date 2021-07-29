@@ -108,3 +108,13 @@ a#trouble-login {
 a#trouble-login:hover {
   color: black;
 }
+
+@media (max-width: 800px) {
+  img#interview {
+    display: none;
+  }
+
+  main > div {
+    width: 100%;
+  }
+}
