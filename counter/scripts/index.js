@@ -20,7 +20,7 @@ dateInput.addEventListener("click", () => {
 function setTime() {
   const now = new Date();
   const date = getDate("ymd", "-");
-  console.log(dateInput.value, date);
+
   if (dateInput.value === date) {
     const hourMinutes = now.toLocaleTimeString(navigator.language, {
       hour: "2-digit",
@@ -76,8 +76,8 @@ function getDate(seq, sep) {
 function getTime() {
   const now = new Date();
   let timeArr = [now.getHours() + 1, now.getMinutes(), now.getSeconds()];
-  timeArr = timeArr.map((value) => String(value).padStart(2, '0'))
-  
+  timeArr = timeArr.map((value) => String(value).padStart(2, "0"));
+
   const time = timeArr.join(":");
   return time;
 }
