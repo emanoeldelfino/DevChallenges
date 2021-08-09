@@ -2,10 +2,11 @@ const dateInput = document.querySelector("input#date");
 const timeInput = document.querySelector("input#time");
 const form = document.querySelector("form#form");
 
-const date = getDate("ymd", "-");
-dateInput.setAttribute("value", date);
 const time = getTime();
 timeInput.setAttribute("value", time);
+const sumDay = parseInt(time.slice(0, 2)) > 0 ? 0 : 1;
+const date = getDate("ymd", "-", sumDay);
+dateInput.setAttribute("value", date);
 
 dateInput.addEventListener("click", () => {
   const date = getDate("ymd", "-");
@@ -45,9 +46,9 @@ form.addEventListener("submit", (evt) => {
   window.location.replace("./counter.html");
 });
 
-function getDate(seq, sep) {
+function getDate(seq, sep, sumDay = 0) {
   const now = new Date();
-  const dd = String(now.getDate()).padStart(2, "0");
+  const dd = String(now.getDate() + sumDay).padStart(2, "0");
   const mm = String(now.getMonth() + 1).padStart(2, "0");
   const yyyy = now.getFullYear();
 
@@ -75,7 +76,8 @@ function getDate(seq, sep) {
 
 function getTime() {
   const now = new Date();
-  let timeArr = [now.getHours() + 1, now.getMinutes(), now.getSeconds()];
+  const hour = now.getHours();
+  let timeArr = [hour < 23 ? hour + 1 : 0, now.getMinutes(), now.getSeconds()];
   timeArr = timeArr.map((value) => String(value).padStart(2, "0"));
 
   const time = timeArr.join(":");
