@@ -16,7 +16,7 @@ input:active {
 }
 
 form#form label input:hover {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(15, 15, 15);
 }
 
 h1 {
