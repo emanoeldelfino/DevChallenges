@@ -3,29 +3,29 @@ const formDate = new Date(...formData);
 const spansDate = document.querySelectorAll(
   "main div#time div span:first-child"
 );
+const titleElem = document.querySelector("title");
 
 (function updateTime() {
-  let currentDate = new Date();
+  const currentDate = new Date();
 
-  let seconds = Math.floor((formDate - currentDate) / 1000);
-  let minutes = Math.floor(seconds / 60);
-  let hours = Math.floor(minutes / 60);
-  let days = Math.floor(hours / 24);
+  const ms = formDate - currentDate;
+  const seconds = Math.floor(ms / 1000) % 60;
+  const minutes = Math.floor(ms / (1000 * 60)) % 60;
+  const hours = Math.floor(minutes / (1000 * 60 * 60)) % 24;
+  const days = Math.floor(hours / (1000 * 60 * 60 * 24));
 
-  hours = hours - days * 24;
-  minutes = minutes - days * 24 * 60 - hours * 60;
-  seconds = seconds - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60;
   let diff = [days, hours, minutes, seconds];
 
   if (
     seconds + minutes + hours + days >= 0 &&
     diff.every((value) => value === Math.abs(value))
   ) {
+    diff = diff.map(elem => String(elem).padStart(2, "0"));
     spansDate.forEach((spanDate, index) => {
-      console.log(diff[index]);
       spanDate.textContent = diff[index];
     });
-    setTimeout(updateTime, 1000);
+    titleElem.innerHTML = `Counter ${diff[0]}:${diff[1]}:${diff[2]}:${diff[3]}`;
+    setTimeout(updateTime, 100);
   } else {
     const soundEffect = new Audio("./assets/bell-alert.mp3");
     soundEffect.play();
