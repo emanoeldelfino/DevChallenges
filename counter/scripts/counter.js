@@ -11,8 +11,8 @@ const titleElem = document.querySelector("title");
   const ms = formDate - currentDate;
   const seconds = Math.floor(ms / 1000) % 60;
   const minutes = Math.floor(ms / (1000 * 60)) % 60;
-  const hours = Math.floor(minutes / (1000 * 60 * 60)) % 24;
-  const days = Math.floor(hours / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(ms / (1000 * 60 * 60)) % 24;
+  const days = Math.floor(ms / (1000 * 60 * 60 * 24));
 
   let diff = [days, hours, minutes, seconds];
 
